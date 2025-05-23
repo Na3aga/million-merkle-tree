@@ -8,6 +8,9 @@
     "test": "npx hardhat test",
     "test:gas": "REPORT_GAS=true npx hardhat test",
     "test:million": "npx hardhat test --grep \"Million Leaf Tree\"",
+    "test:add-leaf": "hardhat test test/integration/MerkleTreeAddLeafTest.test.ts",
+    "test:push-leaf": "hardhat test test/integration/MerkleTreePushLeafTest.test.ts",
+    "test:incremental-push": "hardhat test test/integration/IncrementalMerkleTreePushTest.test.ts",
     "generate:million": "NODE_OPTIONS=\"--max-old-space-size=8192\" npx ts-node scripts/02-generate-million-leaf-tree.ts",
     "clean": "rm -rf data/trees/* artifacts/ cache/ typechain-types/"
   },
