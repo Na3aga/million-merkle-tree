@@ -1,0 +1,68 @@
+{
+  "name": "merkle-tree-gas-analysis",
+  "version": "1.0.0",
+  "description": "Production-scale Merkle tree testing with 1M+ leaves - real gas analysis and performance validation",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test",
+    "test:million": "npx hardhat test --grep \"Million Leaf Tree\"",
+    "generate:million": "NODE_OPTIONS=\"--max-old-space-size=8192\" npx ts-node scripts/02-generate-million-leaf-tree.ts",
+    "clean": "rm -rf data/trees/* artifacts/ cache/ typechain-types/"
+  },
+  "keywords": [
+    "merkle-tree",
+    "production-scale",
+    "gas-analysis",
+    "ethereum",
+    "million-leaves",
+    "blockchain-testing",
+    "performance-analysis"
+  ],
+  "author": "Your Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-ignition": "^0.15.11",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.11",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.7",
+    "@nomicfoundation/ignition-core": "^0.15.11",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.8",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "chai": "^4.4.1",
+    "eslint": "^8.57.0",
+    "ethers": "^6.13.1",
+    "hardhat": "^2.22.5",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.12",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/merkle-tree": "^1.0.7",
+    "commander": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/merkle-tree-gas-analysis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/merkle-tree-gas-analysis/issues"
+  },
+  "homepage": "https://github.com/your-org/merkle-tree-gas-analysis#readme"
+}
